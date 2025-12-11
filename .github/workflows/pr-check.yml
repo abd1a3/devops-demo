@@ -1,0 +1,21 @@
+name: PR Check Workflow
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run basic test
+        run: echo "Pull Request workflow is running successfully!"
+
+      - name: Lint check example
+        run: |
+          echo "Simulating linting..."
+          echo "All good!"
